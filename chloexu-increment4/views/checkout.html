@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Chloe Xu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+
+    <title>MonoMuse — Checkout</title>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a class="cta" href="checkout.html">Buy Tickets</a>
+        </nav>
+
+        <main class="main">
+            <h1>Checkout</h1>
+            <p>Complete your purchase below. All prices are $18 per ticket.</p>
+
+            <form id="checkoutForm">
+
+                <!-- Visit Date -->
+                <div class="form-group">
+                    <label for="visitDate">Visit Date (required):</label><br>
+                    <input type="date" id="visitDate" name="visitDate" required><br>
+                    <span class="error" id="dateError"></span>
+                </div>
+
+                <!-- Ticket Type -->
+                <div class="form-group">
+                    <label for="ticketType">Ticket Type (required):</label><br>
+                    <select id="ticketType" name="ticketType" required onchange="calculatePrice()">
+                        <option value="">-- Select a Ticket Type --</option>
+                        <option value="general">General ($18)</option>
+                        <option value="student">Student ($10)</option>
+                        <option value="member">Member ($15)</option>
+                    </select><br>
+                    <span class="error" id="typeError"></span>
+                </div>
+
+                <!-- Ticket Quantity -->
+                <div class="form-group">
+                    <label for="quantity">Ticket Quantity (required, 1–10):</label><br>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" required oninput="calculatePrice()"><br>
+                    <span class="error" id="quantityError"></span>
+                </div>
+
+                <!-- Price Display -->
+                <div class="form-group">
+                    <p id="priceDisplay">Total: $0</p>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email (required):</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <!-- Zip Code -->
+                <div class="form-group">
+                    <label for="zip">Zip Code (optional):</label><br>
+                    <input type="text" id="zip" name="zip" placeholder="5-digit zip code"><br>
+                    <span class="error" id="zipError"></span>
+                </div>
+
+                <!-- Mailing List -->
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="mailingList" name="mailingList">
+                        Join our mailing list
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <button type="button" onclick="submitOrder()">Place Order</button>
+
+            </form>
+
+            <br>
+            <a href="tickets.html">← Back to Ticket Prices</a>
+
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>

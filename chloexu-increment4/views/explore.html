@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Chloe Xu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+
+    <title>MonoMuse — Explore</title>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a class="cta" href="checkout.html">Buy Tickets</a>
+        </nav>
+
+        <main class="main">
+
+            <img src="../static/monomuseback.png" alt="MonoMuse museum building backside" width="800">
+
+            <h3>Mission Statement</h3>
+
+            <p>
+                MonoMuse exists to push the boundaries of what a museum can be. We are dedicated to showcasing the 
+                ways technology reshapes artistic expression — from generative algorithms to immersive digital 
+                environments. Our mission is simple: make the future of art accessible to everyone.
+            </p>
+
+            <h3>Milestones</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="year">2023</span>
+                    <p>Opened our newly expanded east wing, welcoming artists from over 20 countries for our first international collaboration series.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">2018</span>
+                    <p>Launched the MonoMuse Digital Lab, a hands-on space where visitors can experiment with creative coding and generative art tools.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">2016</span>
+                    <p>Founded in Pittsburgh, PA, MonoMuse opened its doors with "Signal & Noise," an exhibition exploring the relationship between data and human emotion.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>
