@@ -1,0 +1,249 @@
+/* global styling */
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #2F4858;
+}
+
+/* typography */
+h1 {
+  font-family: 'Archivo Black', sans-serif !important;
+  color: #2F4858;
+}
+
+h2 {
+  font-family: 'Lexend', sans-serif !important;
+  color: #33658A;
+}
+
+h3 {
+  font-family: 'Lexend', sans-serif !important;
+  color: #33658A;
+}
+
+p, li {
+  font-family: 'Space Mono', monospace;
+  color: #2F4858;
+}
+
+/* logo */
+#logo {
+  width: 18%;
+  display: block;
+  margin: auto;
+}
+
+/* nav */
+nav {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav-tickets {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2F4858;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+/* hero image */
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* hover effect */
+nav a:hover {
+  border-color: #33658A;
+  color: #33658A;
+}
+
+/* active page */
+#navselected {
+  color: #C60F7B;
+}
+
+/* timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+/* exhibitions */
+.exhibition {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 850px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.exhibition img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.exhibition-text h3 {
+  margin-bottom: 8px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.year {
+  font-family: 'Archivo Black', sans-serif !important;
+  color: #C60F7B;
+  font-size: 1.2rem;
+  min-width: 60px;
+}
+
+strong {
+  font-weight: 700 !important;
+}
+
+/* call to action (buy tickets) */
+.cta {
+  background-color: #C60F7B;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cta:hover {
+  background-color: #2F4858;
+}
+
+/* explore page */
+ul {
+  text-align: left;
+}
+
+/* main content */
+.main {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* table (tickets page) */
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+  background-color: #33658A;
+  color: #ffffff;
+  font-family: 'Lexend', sans-serif;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #86BBD8;
+  font-family: 'Space Mono', monospace;
+}
+
+/* zebra striping */
+tbody tr:nth-child(odd) td {
+  background-color: #e5e5e5;
+}
+
+/* form (checkout page) */
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+input, button {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #86BBD8;
+}
+
+button {
+  background-color: #C60F7B;
+  color: #ffffff;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #2F4858;
+}
+
+/* footer */
+footer {
+  border-top: 1px solid #86BBD8;
+  margin-top: 40px;
+  padding: 18px 16px;
+  text-align: center;
+  color: #33658A;
+  font-family: 'Lexend', sans-serif;
+}
+
+/* responsive (mobile) */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+  }
+
+  #logo {
+    width: 40%;
+  }
+}

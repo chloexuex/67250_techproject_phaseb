@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Chloe Xu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/style.css">
+    <script src="./static/script.js" defer></script>
+    <title>MonoMuse</title>
+</head>
+
+<body onload="addYear()">
+    <header>
+        <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+
+        <nav>
+            <a id="navselected" href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a class="cta" href="views/tickets.html">Ticket Prices</a>
+            <a href="views/checkout.html">Checkout</a>
+
+        </nav>
+    </header>
+
+    <div class="hero">
+            <img src="./static/monomuseoutside.png" alt="MonoMuse museum building">
+        
+    </div>
+
+    <div class="main">
+
+        <h2 id="greeting">Welcome to MonoMuse</h2>
+
+        <p>
+            MonoMuse is where art meets the future. We are a contemporary museum built around one idea: 
+            that technology is the most powerful creative tool of our time. From AI-generated installations 
+            to interactive digital sculptures, every exhibition at MonoMuse is designed to challenge how you see the world. Come curious. Leave inspired.
+
+
+        </p>
+
+        <a class="cta" href="views/tickets.html">Ticket Information</a>
+    </div>
+
+    <footer>
+        <p id="copyYear"></p>
+    </footer>
+</body>
+</html>
