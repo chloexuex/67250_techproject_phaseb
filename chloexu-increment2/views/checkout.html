@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Chloe Xu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <title>MonoMuse</title>
+    
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a class="cta" href="tickets.html">Ticket Prices</a>
+            <a id="navselected" href="checkout.html">Checkout</a>
+
+        </nav>
+    </header>
+
+    <div class="main">
+        <form>
+            <label for="name">Name (required):</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email (required):</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="quantity">Ticket Quantity (required):</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+
+        <a href="tickets.html">Ticket Prices</a>
+    </div>
+
+    <footer>
+        <p>© 2026 MonoMuse</p>
+    </footer>
+</body>
+</html>
