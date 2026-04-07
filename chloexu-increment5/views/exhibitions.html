@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Chloe Xu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts: Archivo Black, Lexend, Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../static/style.css">
+
+    <!-- jQuery library (v4.0.0) — used for Read More / Read Less toggle -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+    <!-- Main JavaScript file — handles nav, footer year, slideshow -->
+    <script src="../static/script.js" defer></script>
+
+    <title>MonoMuse — Exhibitions</title>
+</head>
+
+<body onload="addYear(); initSlideshow();">
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <button class="hamburger" onclick="toggleNav()">☰</button>
+            <a class="first" href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a class="cta" href="checkout.html">Buy Tickets</a>
+        </nav>
+
+        <main class="main">
+            <h1>Exhibitions</h1>
+
+            <!-- YouTube video embed — museum/art related video -->
+            <h2>Featured Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/WBwNw4WjV7g?si=EINSsCuBGhSQEKTd"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Exhibition 1 -->
+            <div class="exhibition">
+                <!-- Photo by Possessed Photography on Unsplash (https://unsplash.com/@possessedphotography) -->
+                <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=600" alt="Glitch and Flow exhibition featuring AI generated artwork">
+                <div class="exhibition-text">
+                    <h3>Glitch & Flow: When Machines Dream</h3>
+                    <p>
+                        What happens when an algorithm is given a paintbrush? Glitch & Flow invites visitors
+                        into a world where artificial intelligence becomes a creative collaborator. Featuring
+                        generative works that shift and evolve in real time, this exhibition blurs the line
+                        between artist and machine — and asks who really holds the brush.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Exhibition 2 -->
+            <div class="exhibition">
+                <!-- Photo by Alexandre Debiève on Unsplash (https://unsplash.com/@alexkixa) -->
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600" alt="Signal exhibition exploring invisible digital forces">
+                <div class="exhibition-text">
+                    <h3>Signal: Designing the Invisible</h3>
+                    <p>
+                        From Wi-Fi waves to neural signals, Signal explores the invisible forces that shape
+                        our digital lives. Through large-scale projections, sound installations, and tactile
+                        displays, this exhibition transforms the abstract into the tangible — making the
+                        unseen impossible to ignore.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Image slideshow gallery — 3 images, controlled by changeSlide() in script.js -->
+            <h2>Gallery</h2>
+            <div class="slideshow">
+                <button class="slide-btn" onclick="changeSlide(-1)">&#8592;</button>
+                <div class="slides">
+                    <!-- Photo by Possessed Photography on Unsplash (https://unsplash.com/@possessedphotography) -->
+                    <img class="slide" src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800" alt="AI generated digital artwork">
+                    <!-- Photo by Alexandre Debiève on Unsplash (https://unsplash.com/@alexkixa) -->
+                    <img class="slide" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Electronic circuit board art installation">
+                    <!-- Photo by Europeana on Unsplash (https://unsplash.com/@europeana) -->
+                    <img class="slide" src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800" alt="Museum exhibition gallery space">
+                </div>
+                <button class="slide-btn" onclick="changeSlide(1)">&#8594;</button>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>
